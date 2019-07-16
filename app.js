@@ -44,8 +44,8 @@ var credentials = {key: privateKey, cert: certificate};
  
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
-var PORT = 18080;
-var SSLPORT = 18081;
+var PORT = 80;
+var SSLPORT = 443;
 app.use(express.static('public'))
 httpServer.listen(PORT, function() {
     console.log('HTTP Server is running on: http://localhost:%s', PORT);
